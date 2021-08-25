@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a class="link" href="/">Home</a> |
+    <a class="link" href="/skills">Skills-List</a> |
+    <a class="link" href="/skills/<%= skill.id %>/edit">Edit Skill</a>
+    <h1>Skill #<%= skillNum%></h1>
+    <h3><%=skill.skillName%></h3>
+
+    <form action="/skills/<%=skill.id %>?_method=DELETE" method="POST">
+      <button class="btns" type="submit">Delete</button>
+    </form>
+  </body>
+</html>
